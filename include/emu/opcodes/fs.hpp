@@ -2,7 +2,6 @@
 #define FS_HPP
 
 #include <cstdint>
-#include <sys/types.h> 
 
 class Emulator;
 
@@ -16,7 +15,7 @@ uint64_t handleRead(Emulator& emulator, int fd, uint64_t buf_addr, size_t count)
 
 uint64_t handleWrite(Emulator& emulator, int fd, uint64_t buf_addr, size_t count);
 
-uint64_t handleLseek(Emulator& emulator, int fd, off_t offset, int whence);
+uint64_t handleLseek(Emulator& emulator, int fd, int64_t offset, int whence);
 
 } // namespace fs
 

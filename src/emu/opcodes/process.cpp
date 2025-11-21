@@ -19,7 +19,11 @@ uint64_t handleExit(Emulator& emulator, uint64_t code) {
 
 uint64_t handleGetpid() {
     LOG_DEBUG("getpid called");
-    return 1000;
+#ifdef _WIN32
+    return GetCurrentProcessId();
+#else
+    return getpid();
+#endif
 }
 
 uint64_t handleGetuid() {

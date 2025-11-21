@@ -37,6 +37,10 @@ target_link_libraries(elfexec PRIVATE
         ${UNICORN_LIB}
 )
 
+if(WIN32)
+    target_link_libraries(elfexec PRIVATE kernel32)
+endif()
+
 # Optional: for debug symbols
 if(CMAKE_BUILD_TYPE MATCHES Debug)
     target_compile_options(elfexec PRIVATE -g)

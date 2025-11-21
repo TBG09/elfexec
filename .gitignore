@@ -1,0 +1,13 @@
+# IDE files
+.idea/
+.vscode/
+
+# Build artifacts
+cmake-build-*/
+*.o
+*.s
+elfexec
+test
+
+# Other
+test_output.txt
