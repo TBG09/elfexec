@@ -2,6 +2,7 @@
 #define FS_HPP
 
 #include <cstdint>
+#include <cstddef>
 
 class Emulator;
 
